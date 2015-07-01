@@ -1,8 +1,11 @@
+//package as war
 apply plugin: 'war'
+//supply appengineRun, appengineUpdate, appengineStop tasks
 apply plugin: 'appengine'
 
 def appEmail  = "guojun.blue@gmail.com"
 
+//check latest version https://cloud.google.com/appengine/downloads 
 def appengineVersion = "1.9.22"
 
 buildscript {
@@ -24,9 +27,19 @@ dependencies {
 	compile "com.google.appengine:appengine-api-1.0-sdk:${appengineVersion}"
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
+
+/*DEPRECATED: Using client login (email + password) will NOT be supported
+in future versions of appengine, use oauth2 instead
+see https://github.com/GoogleCloudPlatform/gradle-appengine-plugin#oauth2
+
+httpPort only for local server
+*/
 appengine {
 
-    httpPort = 8888
+    httpPort = 8080
     downloadSdk = true
 
     appcfg {

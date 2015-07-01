@@ -1,7 +1,9 @@
 # HelloAppEngineGradle
 
 Initial Release
+
 1. test your app locally
+
 gradle appengineStage
 gradle appengineRun
 gradle appengineStop

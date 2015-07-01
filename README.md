@@ -4,17 +4,19 @@ Initial Release
 
 1. test your app locally
 
-gradle appengineStage
-gradle appengineRun
-gradle appengineStop
+  gradle appengineStage
+  gradle appengineRun
+  gradle appengineStop
 
-2. deploy your app to appengine
-gradle appengineUpdate
+2.  deploy your app to appengine
+  gradle appengineUpdate
 3. visit your app
-https://onlineconverter-993.appspot.com/hellogradle
+  https://onlineconverter-993.appspot.com/hellogradle
 
-note: 
+note:
+
 1. onlineconverter-993 is your project id which you can get in app engine dashboard. which also has to be defined in appengine-web.xml "<application>onlineconverter-993</application>"
+2. 
 2. you can't specify appengine port
 
 
